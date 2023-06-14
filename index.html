@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Dropdown list</title>
+</head>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+<body>
+
+	<div class="dropdown">
+		<input type="text" class="textBox" placeholder="Hi!" readonly>
+
+		<div class="option">
+			<div onclick="show('HTML')"> <i class="fa-brands fa-html5"></i> HTML </div>
+			<div onclick="show('CSS')"> <i class="fa-brands fa-css3-alt"></i> CSS</div>
+			<div onclick="show('JavaScript / React')"> <i class="fa-brands fa-js"></i> JavaScript</div>
+			<div onclick="show('Java / SpringBoot')"> <i class="fa-brands fa-java"></i> Java</div>
+			<div onclick="show('Python / QGIS / QtDesigner')"> <i class="fa-brands fa-python"></i> Python</div>
+			<div onclick="show('SQL - Postgres - MySQL')"> <i class="fa-solid fa-database"></i> SQL</div>
+		</div>
+
+
+		<div id="list">
+			<ul></ul>
+		</div>
+
+	</div>
+
+	<script>
+		function show(word) {
+			document.querySelector('.textBox').value = word;
+		}
+		let dropdown = document.querySelector('.dropdown')
+		dropdown.onclick = function () {
+			dropdown.classList.toggle('active')
+		}
+	</script>
+</body>
+
+</html>
